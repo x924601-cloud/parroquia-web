@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Parroquia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .text-dorado { color: #d4af37; }
+        .bg-dorado { background-color: #d4af37; }
+        .bg-celeste-oscuro { background-color: #0284c7; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+
+    <!-- PANTALLA DE LOGIN -->
+    <div id="login-section" class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Acceso Privado</h2>
+        <p class="text-sm text-gray-500 text-center mb-6">Solo personal autorizado de la parroquia.</p>
+        
+        <input type="email" id="email" placeholder="Correo electrónico" class="w-full mb-4 p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+        <input type="password" id="password" placeholder="Contraseña" class="w-full mb-6 p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+        
+        <button id="btn-login" class="w-full bg-celeste-oscuro text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition">Iniciar Sesión</button>
+        <p id="login-error" class="text-red-500 text-sm text-center mt-4 hidden">Credenciales incorrectas.</p>
+    </div>
+
+    <!-- PANEL DE CONTROL (Oculto al inicio) -->
+    <div id="admin-section" class="hidden w-full max-w-4xl bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="bg-celeste-oscuro p-6 text-white flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Gestor de Contenido</h1>
+            <button id="btn-logout" class="bg-red-500 px-4 py-2 rounded font-bold hover:bg-red-600">Cerrar Sesión</button>
+        </div>
+        
+        <div class="p-8 grid md:grid-cols-2 gap-8">
+            <div>
+                <label class="block text-gray-700 font-bold mb-2">Mensaje del Párroco</label>
+                <textarea id="input-mensaje" rows="4" class="w-full p-3 border rounded-lg mb-4"></textarea>
+
+                <label class="block text-gray-700 font-bold mb-2">Horarios de Misas (Escribe uno por línea)</label>
+                <textarea id="input-horarios" rows="4" class="w-full p-3 border rounded-lg mb-4"></textarea>
+            </div>
+            
+            <div>
+                <label class="block text-gray-700 font-bold mb-2">Título de Próximo Evento / Aviso</label>
+                <input type="text" id="input-evento-titulo" class="w-full p-3 border rounded-lg mb-4">
+
+                <label class="block text-gray-700 font-bold mb-2">Descripción del Evento</label>
+                <textarea id="input-evento-desc" rows="4" class="w-full p-3 border rounded-lg mb-4"></textarea>
+                
+                <button id="btn-guardar" class="w-full bg-dorado text-white font-bold py-4 rounded-lg hover:bg-yellow-600 transition shadow-lg mt-4 text-lg">
+                    GUARDAR CAMBIOS EN LA PÁGINA
+                </button>
+                <p id="save-msg" class="text-green-600 font-bold text-center mt-3 hidden">¡Actualizado con éxito!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGICA DE FIREBASE (Para autenticación y escribir datos) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAUtkTIbLyykgdxgq0Le1iqG0IvZMehKc0",
+            authDomain: "parroquia-medalla-milagrosa.firebaseapp.com",
+            projectId: "parroquia-medalla-milagrosa",
+            storageBucket: "parroquia-medalla-milagrosa.firebasestorage.app",
+            messagingSenderId: "566502079957",
+            appId: "1:566502079957:web:878ff30f6f83981e36515c",
+            measurementId: "G-NQ6BD1DMQP"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+
+        // Referencias del DOM
+        const loginSection = document.getElementById('login-section');
+        const adminSection = document.getElementById('admin-section');
+        const errorMsg = document.getElementById('login-error');
+        const saveMsg = document.getElementById('save-msg');
+
+        // Escuchar si hay usuario logueado
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                loginSection.classList.add('hidden');
+                adminSection.classList.remove('hidden');
+                
+                // Cargar datos existentes en el formulario
+                const docSnap = await getDoc(doc(db, "contenidos", "principal"));
+                if (docSnap.exists()) {
+                    const data = docSnap.data();
+                    document.getElementById('input-mensaje').value = data.mensajeParroco || "";
+                    document.getElementById('input-horarios').value = data.horariosMisa || "";
+                    document.getElementById('input-evento-titulo').value = data.tituloEvento || "";
+                    document.getElementById('input-evento-desc').value = data.descEvento || "";
+                }
+            } else {
+                loginSection.classList.remove('hidden');
+                adminSection.classList.add('hidden');
+            }
+        });
+
+        // Iniciar sesión
+        document.getElementById('btn-login').addEventListener('click', () => {
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('password').value;
+            signInWithEmailAndPassword(auth, email, pass)
+                .catch((error) => { errorMsg.classList.remove('hidden'); });
+        });
+
+        // Cerrar sesión
+        document.getElementById('btn-logout').addEventListener('click', () => {
+            signOut(auth);
+        });
+
+        // Guardar Datos en Firebase
+        document.getElementById('btn-guardar').addEventListener('click', async () => {
+            const btn = document.getElementById('btn-guardar');
+            btn.innerText = "Guardando...";
+            
+            const newData = {
+                mensajeParroco: document.getElementById('input-mensaje').value,
+                horariosMisa: document.getElementById('input-horarios').value,
+                tituloEvento: document.getElementById('input-evento-titulo').value,
+                descEvento: document.getElementById('input-evento-desc').value
+            };
+
+            // Escribe en la base de datos (merge: true es para no borrar campos si añades más en el futuro)
+            await setDoc(doc(db, "contenidos", "principal"), newData, { merge: true });
+            
+            btn.innerText = "GUARDAR CAMBIOS EN LA PÁGINA";
+            saveMsg.classList.remove('hidden');
+            setTimeout(() => { saveMsg.classList.add('hidden'); }, 3000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parroquia Medalla Milagrosa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+        body { font-family: 'Lato', sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+        .text-dorado { color: #d4af37; }
+        .bg-dorado { background-color: #d4af37; }
+        .border-dorado { border-color: #d4af37; }
+        .bg-celeste { background-color: #f0f9ff; } /* Celeste muy suave para fondos */
+        .text-celeste-oscuro { color: #0284c7; } /* Para contraste y legibilidad */
+        .gradient-overlay { background: linear-gradient(to top, rgba(2, 132, 199, 0.9), rgba(2, 132, 199, 0.4)); }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-dorado/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-dorado flex items-center justify-center text-white font-bold serif text-xl">M</div>
+                    <span class="font-bold text-xl text-celeste-oscuro serif tracking-wide">Medalla Milagrosa</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#horarios" class="text-gray-600 hover:text-dorado transition">Horarios</a>
+                    <a href="#sacramentos" class="text-gray-600 hover:text-dorado transition">Sacramentos</a>
+                    <a href="#comunidad" class="text-gray-600 hover:text-dorado transition">Comunidad</a>
+                    <a href="#contacto" class="text-gray-600 hover:text-dorado transition">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-20 pb-32 flex content-center items-center justify-center min-h-[80vh]">
+        <div class="absolute top-0 w-full h-full bg-center bg-cover" style="background-image: url('https://images.unsplash.com/photo-1548625361-ecacbd0b1ba5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+            <span class="w-full h-full absolute opacity-90 gradient-overlay"></span>
+        </div>
+        <div class="container relative mx-auto text-center px-4">
+            <h1 class="text-white font-bold text-5xl md:text-7xl serif drop-shadow-lg mb-4">Parroquia<br><span class="text-dorado">Medalla Milagrosa</span></h1>
+            <p class="mt-4 text-lg md:text-2xl text-blue-100 max-w-2xl mx-auto font-light">Un espacio de fe, esperanza y comunidad bajo el manto de María.</p>
+        </div>
+    </header>
+
+    <!-- Mensaje del Párroco y Horarios (Conectados a Firebase) -->
+    <section id="horarios" class="py-20 bg-celeste">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Mensaje Párroco -->
+                <div class="bg-white p-10 rounded-2xl shadow-xl border-t-4 border-dorado relative">
+                    <div class="absolute -top-6 -left-6 text-6xl text-dorado opacity-50 serif">"</div>
+                    <h2 class="text-3xl font-bold text-celeste-oscuro serif mb-6">Mensaje del Párroco</h2>
+                    <p id="fb-mensaje-parroco" class="text-gray-600 leading-relaxed italic text-lg text-justify">
+                        Cargando mensaje de bienvenida...
+                    </p>
+                </div>
+                
+                <!-- Horarios de Misa -->
+                <div class="bg-celeste-oscuro p-10 rounded-2xl shadow-xl bg-gradient-to-br from-[#0284c7] to-[#0369a1] text-white">
+                    <h2 class="text-3xl font-bold text-dorado serif mb-6">Horarios de Misas</h2>
+                    <div id="fb-horarios-misa" class="whitespace-pre-line text-lg font-light leading-loose">
+                        Cargando horarios actualizados...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sacramentos (Acordeón interactivo) -->
+    <section id="sacramentos" class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center text-celeste-oscuro serif mb-12">Requisitos de Sacramentos</h2>
+            
+            <div class="space-y-4">
+                <!-- Bautismo -->
+                <details class="group bg-gray-50 rounded-lg shadow-sm border border-gray-100 open:ring-1 open:ring-dorado open:bg-white transition-all">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-xl text-gray-800 serif">
+                        <span>Bautismo</span>
+                        <span class="transition group-open:rotate-180 text-dorado">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-gray-600 mt-3 group-open:animate-fadeIn px-6 pb-6">
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Certificado de nacimiento del niño/a.</li>
+                            <li>Cédula de los padres y padrinos.</li>
+                            <li>Los padrinos deben estar casados por la Iglesia (presentar certificado) o ser solteros sin compromisos.</li>
+                            <li>Asistir a las charlas pre-bautismales.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Matrimonio -->
+                <details class="group bg-gray-50 rounded-lg shadow-sm border border-gray-100 open:ring-1 open:ring-dorado open:bg-white transition-all">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-xl text-gray-800 serif">
+                        <span>Matrimonio</span>
+                        <span class="transition group-open:rotate-180 text-dorado">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-gray-600 mt-3 group-open:animate-fadeIn px-6 pb-6">
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Certificado de Bautismo de ambos actualizado (con nota marginal para matrimonio).</li>
+                            <li>Fotocopia de cédulas de los novios y padrinos.</li>
+                            <li>Certificado de confirmación.</li>
+                            <li>Asistir a las catequesis prematrimoniales.</li>
+                            <li>Reservar fecha con 6 meses de anticipación.</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Próximos Eventos / Avisos Parroquiales -->
+    <section class="py-20 bg-celeste">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-4xl font-bold text-center text-celeste-oscuro serif mb-12">Avisos y Eventos</h2>
+            <div class="bg-white p-8 rounded-2xl shadow-lg text-center border-b-4 border-dorado">
+                <h3 id="fb-evento-titulo" class="text-2xl font-bold text-gray-800 mb-4">Cargando próximos eventos...</h3>
+                <p id="fb-evento-desc" class="text-gray-600 text-lg">Por favor espere.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media & Contacto -->
+    <section id="contacto" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 max-w-6xl grid md:grid-cols-2 gap-12">
+            <!-- Videos y Redes -->
+            <div>
+                <h2 class="text-3xl font-bold text-dorado serif mb-6">Misa en Vivo</h2>
+                <p class="text-gray-400 mb-6">Acompáñanos todos los domingos en nuestra transmisión oficial de YouTube.</p>
+                <div class="aspect-w-16 aspect-h-9 bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700 p-8 text-center">
+                    <p class="text-dorado">Aquí se puede incrustar el enlace del video de YouTube semanalmente.</p>
+                </div>
+                <div class="mt-8 flex gap-4">
+                    <a href="#" class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-full font-bold transition">Facebook</a>
+                    <a href="#" class="px-6 py-2 bg-red-600 hover:bg-red-700 rounded-full font-bold transition">YouTube</a>
+                    <a href="#" class="px-6 py-2 bg-pink-600 hover:bg-pink-700 rounded-full font-bold transition">Instagram</a>
+                </div>
+            </div>
+
+            <!-- Contacto y Mapa -->
+            <div>
+                <h2 class="text-3xl font-bold text-dorado serif mb-6">Contáctanos</h2>
+                <ul class="space-y-4 text-gray-300 mb-8">
+                    <li>📍 <strong>Dirección:</strong> [Insertar Dirección de la Parroquia]</li>
+                    <li>📞 <strong>Teléfono:</strong> [Insertar Teléfono de oficina]</li>
+                    <li>✉️ <strong>Email:</strong> contacto@medallamilagrosa.com</li>
+                </ul>
+                <div class="w-full h-48 bg-gray-800 rounded-lg overflow-hidden border border-gray-700">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15762.6106606018!2d-79.86603091176211!3d9.003923053678583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca63abebfb589%3A0xc3f0b2fbe8e12d5f!2sProvincia%20de%20Col%C3%B3n!5e0!3m2!1ses-419!2spa!4v1715000000000!5m2!1ses-419!2spa" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-center py-6 text-gray-500 text-sm">
+        <p>&copy; 2026 Parroquia Medalla Milagrosa. Proyecto de Servicio Social.</p>
+    </footer>
+
+    <!-- LOGICA DE FIREBASE (Para leer los datos) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+        // Tus credenciales
+        const firebaseConfig = {
+            apiKey: "AIzaSyAUtkTIbLyykgdxgq0Le1iqG0IvZMehKc0",
+            authDomain: "parroquia-medalla-milagrosa.firebaseapp.com",
+            projectId: "parroquia-medalla-milagrosa",
+            storageBucket: "parroquia-medalla-milagrosa.firebasestorage.app",
+            messagingSenderId: "566502079957",
+            appId: "1:566502079957:web:878ff30f6f83981e36515c",
+            measurementId: "G-NQ6BD1DMQP"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        async function cargarInformacionPublica() {
+            try {
+                const docRef = doc(db, "contenidos", "principal");
+                const docSnap = await getDoc(docRef);
+
+                if (docSnap.exists()) {
+                    const data = docSnap.data();
+                    
+                    if(data.horariosMisa) document.getElementById('fb-horarios-misa').innerText = data.horariosMisa;
+                    if(data.mensajeParroco) document.getElementById('fb-mensaje-parroco').innerText = data.mensajeParroco;
+                    if(data.tituloEvento) document.getElementById('fb-evento-titulo').innerText = data.tituloEvento;
+                    if(data.descEvento) document.getElementById('fb-evento-desc').innerText = data.descEvento;
+                } else {
+                    document.getElementById('fb-horarios-misa').innerText = "Horarios no disponibles en este momento.";
+                    document.getElementById('fb-mensaje-parroco').innerText = "Bienvenido a nuestra comunidad parroquial.";
+                    document.getElementById('fb-evento-titulo').innerText = "Sin eventos próximos";
+                    document.getElementById('fb-evento-desc').innerText = "Mantente atento a nuestros próximos avisos.";
+                }
+            } catch (error) {
+                console.error("Error cargando base de datos:", error);
+            }
+        }
+
+        cargarInformacionPublica();
+    </script>
+</body>
+</html>
