@@ -5,59 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administración - Parroquia Virgen de la Medalla Milagrosa</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .text-dorado { color: #d4af37; }
-        .bg-dorado { background-color: #d4af37; }
-        .bg-celeste-oscuro { background-color: #0284c7; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medalla: {
+                            celesteLight: '#E8F4F8',
+                            celeste: '#85C1E9',
+                            celesteDark: '#2E86C1',
+                            dorado: '#D4AF37',
+                            navy: '#152842'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-sky-50 min-h-screen flex items-center justify-center p-4">
+<body class="font-sans bg-medalla-celesteLight/60 min-h-screen flex items-center justify-center p-4 text-medalla-navy">
 
     <!-- PANTALLA DE LOGIN -->
-    <div id="login-section" class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md border-t-4 border-amber-400">
-        <h2 class="text-2xl font-bold text-center text-sky-900 mb-2">Acceso Administrativo</h2>
-        <p class="text-sm text-gray-500 text-center mb-6">Parroquia Virgen de la Medalla Milagrosa · Alcalde Díaz</p>
+    <div id="login-section" class="bg-white p-8 sm:p-10 rounded-3xl shadow-xl w-full max-w-md border-t-4 border-medalla-dorado">
+        <div class="w-14 h-14 rounded-full border-2 border-medalla-dorado flex items-center justify-center bg-medalla-celesteLight mx-auto mb-4">
+            <span class="font-serif font-bold text-2xl text-medalla-dorado">M</span>
+        </div>
+        <h2 class="font-serif text-2xl font-bold text-center text-medalla-navy mb-1">Acceso Administrativo</h2>
+        <p class="text-xs text-gray-500 text-center mb-6">Parroquia Virgen de la Medalla Milagrosa · Alcalde Díaz</p>
 
-        <input type="email" id="email" placeholder="Correo electrónico" class="w-full mb-4 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 outline-none">
-        <input type="password" id="password" placeholder="Contraseña" class="w-full mb-6 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 outline-none">
+        <div class="space-y-4">
+            <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Correo electrónico</label>
+                <input type="email" id="email" placeholder="admin@medallamilagrosa.com" class="w-full p-3.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-medalla-celesteDark outline-none text-sm">
+            </div>
+            <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Contraseña</label>
+                <input type="password" id="password" placeholder="••••••••" class="w-full p-3.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-medalla-celesteDark outline-none text-sm">
+            </div>
 
-        <button id="btn-login" class="w-full bg-celeste-oscuro text-white font-bold py-3 rounded-lg hover:bg-sky-700 transition">Iniciar Sesión</button>
-        <p id="login-error" class="text-red-500 text-sm text-center mt-4 hidden">Correo o contraseña incorrectos.</p>
+            <button id="btn-login" class="w-full bg-medalla-navy text-white font-bold py-3.5 rounded-xl hover:bg-medalla-celesteDark transition shadow-md text-sm uppercase tracking-wider">
+                Iniciar Sesión
+            </button>
+            <p id="login-error" class="text-red-500 text-xs text-center mt-2 hidden font-medium">Correo o contraseña incorrectos.</p>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-gray-100 text-center">
+            <a href="index.html" class="text-xs text-medalla-celesteDark hover:text-medalla-dorado font-semibold transition">
+                <i class="fa-solid fa-arrow-left mr-1"></i> Volver al sitio web de la parroquia
+            </a>
+        </div>
     </div>
 
     <!-- PANEL DE CONTROL -->
-    <div id="admin-section" class="hidden w-full max-w-5xl bg-white rounded-2xl shadow-xl overflow-hidden border border-amber-200">
-        <div class="bg-celeste-oscuro p-6 text-white flex flex-wrap justify-between items-center gap-4">
-            <div>
-                <h1 class="text-2xl font-bold">Gestor de Contenido Parroquial</h1>
-                <p class="text-sky-100 text-sm">Actualiza el mensaje, horarios y anuncios sin tocar el código</p>
+    <div id="admin-section" class="hidden w-full max-w-5xl bg-white rounded-3xl shadow-2xl overflow-hidden border border-medalla-celeste/40 my-6">
+        <div class="bg-medalla-navy p-6 sm:px-8 text-white flex flex-wrap justify-between items-center gap-4 border-b-4 border-medalla-dorado">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full border border-medalla-dorado flex items-center justify-center bg-white/10 text-medalla-dorado font-serif font-bold text-xl">M</div>
+                <div>
+                    <h1 class="font-serif text-xl sm:text-2xl font-bold">Gestor de Contenido Parroquial</h1>
+                    <p class="text-medalla-celesteLight text-xs">Actualiza bienvenida, horarios de misas y anuncios parroquiales</p>
+                </div>
             </div>
-            <button id="btn-logout" class="bg-red-500 px-4 py-2 rounded-lg font-bold hover:bg-red-600 transition">Cerrar Sesión</button>
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="bg-white/15 hover:bg-white/25 px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-globe"></i> Ver Sitio Web
+                </a>
+                <button id="btn-logout" class="bg-red-500/90 hover:bg-red-600 px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-right-from-bracket"></i> Salir
+                </button>
+            </div>
         </div>
 
-        <div class="p-8 grid md:grid-cols-2 gap-8">
-            <div>
-                <label class="block text-sky-900 font-bold mb-2">Mensaje del Párroco / Bienvenida</label>
-                <textarea id="input-mensaje" rows="7" class="w-full p-3 border border-gray-300 rounded-lg mb-5 focus:ring-2 focus:ring-sky-500 outline-none"></textarea>
-
-                <label class="block text-sky-900 font-bold mb-2">Horarios de Misas, Adoración y Confesión</label>
-                <textarea id="input-horarios" rows="8" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 outline-none"></textarea>
-            </div>
-
-            <div class="flex flex-col justify-between">
+        <div class="p-6 sm:p-8 grid md:grid-cols-2 gap-8">
+            <div class="space-y-5">
                 <div>
-                    <label class="block text-sky-900 font-bold mb-2">Título del Anuncio Parroquial</label>
-                    <input type="text" id="input-anuncio-titulo" placeholder="Ej: Avisos de la Semana / Próxima Actividad" class="w-full p-3 border border-gray-300 rounded-lg mb-5 focus:ring-2 focus:ring-sky-500 outline-none">
-
-                    <label class="block text-sky-900 font-bold mb-2">Anuncios Parroquiales</label>
-                    <textarea id="input-anuncio-desc" rows="10" placeholder="Escribe aquí los anuncios parroquiales vigentes..." class="w-full p-3 border border-gray-300 rounded-lg mb-5 focus:ring-2 focus:ring-sky-500 outline-none"></textarea>
+                    <label class="block text-medalla-navy font-bold text-sm mb-2">
+                        <i class="fa-solid fa-church text-medalla-dorado mr-1.5"></i> Bienvenida y Mensaje del Párroco
+                    </label>
+                    <textarea id="input-mensaje" rows="8" class="w-full p-3.5 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-medalla-celesteDark outline-none text-sm leading-relaxed"></textarea>
                 </div>
 
                 <div>
-                    <button id="btn-guardar" class="w-full bg-dorado text-white font-bold py-4 rounded-xl hover:bg-amber-600 transition shadow-lg text-lg">
-                        GUARDAR CAMBIOS EN LA PÁGINA
+                    <label class="block text-medalla-navy font-bold text-sm mb-2">
+                        <i class="fa-regular fa-clock text-medalla-dorado mr-1.5"></i> Horarios de Misas, Adoración y Confesión
+                    </label>
+                    <textarea id="input-horarios" rows="8" class="w-full p-3.5 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-medalla-celesteDark outline-none text-sm leading-relaxed"></textarea>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-between space-y-5">
+                <div class="space-y-5">
+                    <div>
+                        <label class="block text-medalla-navy font-bold text-sm mb-2">
+                            <i class="fa-solid fa-bullhorn text-medalla-dorado mr-1.5"></i> Título del Anuncio Parroquial
+                        </label>
+                        <input type="text" id="input-anuncio-titulo" placeholder="Ej: Anuncios Parroquiales de la Semana" class="w-full p-3.5 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-medalla-celesteDark outline-none text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-medalla-navy font-bold text-sm mb-2">
+                            <i class="fa-regular fa-newspaper text-medalla-dorado mr-1.5"></i> Contenido de los Anuncios Parroquiales
+                        </label>
+                        <textarea id="input-anuncio-desc" rows="11" placeholder="Escribe aquí los avisos parroquiales vigentes..." class="w-full p-3.5 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-medalla-celesteDark outline-none text-sm leading-relaxed"></textarea>
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <button id="btn-guardar" class="w-full bg-gradient-to-r from-medalla-dorado to-amber-500 text-white font-bold py-4 rounded-2xl hover:shadow-lg transition text-sm sm:text-base uppercase tracking-wider">
+                        <i class="fa-solid fa-floppy-disk mr-2"></i> Guardar Cambios en la Página
                     </button>
-                    <p id="save-msg" class="text-emerald-600 font-bold text-center mt-3 hidden">¡Cambios guardados y publicados en la página!</p>
+                    <div id="status-box" class="mt-3 text-center text-sm font-bold hidden"></div>
                 </div>
             </div>
         </div>
@@ -83,29 +146,37 @@
         const auth = getAuth(app);
 
         const defaultData = {
-            mensajeParroco: "Muchas gracias por su interés en nuestra Parroquia Virgen de la Medalla Milagrosa. Ya sea que esté de visita, que desee hacer de ella su comunidad, o que simplemente le interese saber más sobre nuestra parroquia, nos da mucho gusto tenerlo aquí. Nuestra parroquia se fundó en 1949 y, junto con otras once capillas, forma una amplia comunidad eclesial territorial donde caminamos juntos en comunión, participación y misión.",
-            horariosMisa: "1. Celebración dominical:\n• 7:00 am: Las Malvinas, Villa Grecia, San Pablo, Quebrada Ancha\n• 9:00 am: Parroquia, Ciudad Bolívar, Milenio, Mocambo\n• 11:00 am: Ciudad El Amanecer, La Esperanza, Villa Nueva, El Tecal\n\n2. Adoración al Santísimo Sacramento:\n• Jueves: 9:00 am - 5:00 pm\n\n3. Confesión:\n• Martes a Viernes: 3:00 pm - 5:00 pm",
+            mensajeParroco: "Muchas gracias por su interés en nuestra Parroquia Virgen de la Medalla Milagrosa. Ya sea que esté de visita, que desee hacer de ella su comunidad, o que simplemente le interese saber más sobre nuestra parroquia, nos da mucho gusto tenerlo aquí.\n\nNuestra parroquia se fundó en 1949. En la actualidad, junto con otras once capillas forma una amplia comunidad eclesial territorial en la que el párroco es el pastor principal y cada capilla funciona como un centro de culto religioso y evangelización dentro de esa misma jurisdicción.\n\nLa parroquia se trata de una comunidad de comunión, participación, misión, una familia espiritual cuyos miembros se comunican, se apoyan y se aman mutuamente. Puede ser un lugar para el propio crecimiento espiritual y para poner la fe en acción, sirviendo a Cristo con el propio talento.",
+            horariosMisa: "1. Celebración dominical:\n• 7:00 am: Las Malvinas, Villa Grecia, San Pablo, Quebrada Ancha\n• 9:00 am: Parroquia, Ciudad Bolívar, Milenio, Mocambo\n• 11:00 am: Ciudad El Amanecer, La Esperanza, Villa Nueva, El Tecal\n\n2. Adoración al Santísimo Sacramento:\n• Los Jueves, 9:00 am - 5:00 pm\n\n3. Confesión:\n• Martes a Viernes, 3:00 pm - 5:00 pm",
             tituloAnuncio: "Anuncios Parroquiales",
-            descAnuncio: "Atención de oficina parroquial: Lunes a Viernes de 2:00 pm - 6:00 pm y Sábados de 9:00 am - 12:00 pm (Domingos cerrado). Para inscripciones a sacramentos o consultas, acércate a la oficina o comunícate al +507 6450 7111."
+            descAnuncio: "Atención en despacho parroquial (Calle Central & Calle Colón, Alcalde Díaz):\n• Lunes a Viernes: 2:00 pm - 6:00 pm\n• Sábado: 9:00 am - 12:00 pm (Domingo: cerrado)\n\nPara inscripciones a sacramentos o consultas: Tel. 318 0749 | WhatsApp (mensaje): +507 6450 7111."
         };
 
         const loginSection = document.getElementById('login-section');
         const adminSection = document.getElementById('admin-section');
         const errorMsg = document.getElementById('login-error');
-        const saveMsg = document.getElementById('save-msg');
+        const statusBox = document.getElementById('status-box');
 
         onAuthStateChanged(auth, async (user) => {
             if (user) {
                 loginSection.classList.add('hidden');
                 adminSection.classList.remove('hidden');
 
-                const docSnap = await getDoc(doc(db, "contenidos", "principal"));
-                const data = docSnap.exists() ? docSnap.data() : defaultData;
+                try {
+                    const docSnap = await getDoc(doc(db, "contenidos", "principal"));
+                    const data = docSnap.exists() ? docSnap.data() : defaultData;
 
-                document.getElementById('input-mensaje').value = data.mensajeParroco || defaultData.mensajeParroco;
-                document.getElementById('input-horarios').value = data.horariosMisa || defaultData.horariosMisa;
-                document.getElementById('input-anuncio-titulo').value = data.tituloAnuncio || data.tituloEvento || defaultData.tituloAnuncio;
-                document.getElementById('input-anuncio-desc').value = data.descAnuncio || data.descEvento || defaultData.descAnuncio;
+                    document.getElementById('input-mensaje').value = data.mensajeParroco || defaultData.mensajeParroco;
+                    document.getElementById('input-horarios').value = data.horariosMisa || defaultData.horariosMisa;
+                    document.getElementById('input-anuncio-titulo').value = data.tituloAnuncio || data.tituloEvento || defaultData.tituloAnuncio;
+                    document.getElementById('input-anuncio-desc').value = data.descAnuncio || data.descEvento || defaultData.descAnuncio;
+                } catch (err) {
+                    console.error("Error al leer Firestore:", err);
+                    document.getElementById('input-mensaje').value = defaultData.mensajeParroco;
+                    document.getElementById('input-horarios').value = defaultData.horariosMisa;
+                    document.getElementById('input-anuncio-titulo').value = defaultData.tituloAnuncio;
+                    document.getElementById('input-anuncio-desc').value = defaultData.descAnuncio;
+                }
             } else {
                 loginSection.classList.remove('hidden');
                 adminSection.classList.add('hidden');
@@ -113,7 +184,8 @@
         });
 
         document.getElementById('btn-login').addEventListener('click', () => {
-            const email = document.getElementById('email').value;
+            errorMsg.classList.add('hidden');
+            const email = document.getElementById('email').value.trim();
             const pass = document.getElementById('password').value;
             signInWithEmailAndPassword(auth, email, pass)
                 .catch(() => { errorMsg.classList.remove('hidden'); });
@@ -125,20 +197,33 @@
 
         document.getElementById('btn-guardar').addEventListener('click', async () => {
             const btn = document.getElementById('btn-guardar');
-            btn.innerText = "Guardando...";
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Guardando...';
+            statusBox.classList.add('hidden');
 
-            const newData = {
-                mensajeParroco: document.getElementById('input-mensaje').value,
-                horariosMisa: document.getElementById('input-horarios').value,
-                tituloAnuncio: document.getElementById('input-anuncio-titulo').value,
-                descAnuncio: document.getElementById('input-anuncio-desc').value
-            };
+            try {
+                const newData = {
+                    mensajeParroco: document.getElementById('input-mensaje').value,
+                    horariosMisa: document.getElementById('input-horarios').value,
+                    tituloAnuncio: document.getElementById('input-anuncio-titulo').value,
+                    descAnuncio: document.getElementById('input-anuncio-desc').value
+                };
 
-            await setDoc(doc(db, "contenidos", "principal"), newData, { merge: true });
+                await setDoc(doc(db, "contenidos", "principal"), newData, { merge: true });
 
-            btn.innerText = "GUARDAR CAMBIOS EN LA PÁGINA";
-            saveMsg.classList.remove('hidden');
-            setTimeout(() => { saveMsg.classList.add('hidden'); }, 3000);
+                statusBox.className = "mt-3 text-center text-sm font-bold text-emerald-600";
+                statusBox.innerText = "¡Cambios guardados y publicados en la página!";
+                statusBox.classList.remove('hidden');
+            } catch (err) {
+                console.error("Error al guardar:", err);
+                statusBox.className = "mt-3 text-center text-sm font-bold text-red-600";
+                statusBox.innerText = "Error al guardar: " + err.message;
+                statusBox.classList.remove('hidden');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fa-solid fa-floppy-disk mr-2"></i> Guardar Cambios en la Página';
+                setTimeout(() => { statusBox.classList.add('hidden'); }, 4000);
+            }
         });
     </script>
 </body>
