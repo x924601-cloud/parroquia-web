@@ -119,17 +119,13 @@
                 </div>
 
                 <!-- Menú Escritorio -->
-                <nav class="hidden lg:flex space-x-7 items-center">
+                <nav class="hidden lg:flex space-x-7 items-center whitespace-nowrap">
                     <a href="#inicio" class="text-sm font-semibold text-medalla-navy hover:text-medalla-celesteDark transition duration-300">Inicio</a>
                     <a href="#bienvenida" class="text-sm font-semibold text-medalla-navy hover:text-medalla-celesteDark transition duration-300">Bienvenida</a>
-                    <a href="#horarios" class="text-sm font-semibold text-medalla-navy hover:text-medalla-celesteDark transition duration-300">Horarios y Capillas</a>
                     <a href="#sacramentos" class="text-sm font-semibold text-medalla-navy hover:text-medalla-celesteDark transition duration-300">Sacramentos</a>
-                    <a href="#eventos" class="text-sm font-semibold text-medalla-navy hover:text-medalla-celesteDark transition duration-300">Anuncios y Vida</a>
+                    <a href="#eventos" class="text-sm font-semibold text-medalla-navy hover:text-medalla-celesteDark transition duration-300">Anuncios</a>
                     <a href="#multimedia" class="text-sm font-semibold text-medalla-navy hover:text-medalla-celesteDark transition duration-300">En Vivo</a>
                     <a href="#contacto" class="px-5 py-2.5 rounded-full border border-medalla-dorado text-medalla-dorado hover:bg-medalla-dorado hover:text-white transition duration-300 text-sm font-bold shadow-sm">Contacto</a>
-                    <a href="admin.html" title="Panel de Administración" class="px-4 py-2.5 rounded-full bg-medalla-navy text-white hover:bg-medalla-celesteDark transition duration-300 text-xs font-bold shadow-sm flex items-center gap-1.5">
-                        <i class="fa-solid fa-lock text-medalla-dorado"></i> Admin
-                    </a>
                 </nav>
 
                 <!-- Botón Menú Móvil -->
@@ -146,14 +142,10 @@
             <div class="px-4 py-6 space-y-2 sm:px-6 bg-gradient-to-b from-white to-medalla-celesteLight/40">
                 <a href="#inicio" class="block px-4 py-3 rounded-xl text-base font-semibold text-medalla-navy hover:bg-medalla-celeste/15 hover:text-medalla-celesteDark transition">Inicio</a>
                 <a href="#bienvenida" class="block px-4 py-3 rounded-xl text-base font-semibold text-medalla-navy hover:bg-medalla-celeste/15 hover:text-medalla-celesteDark transition">Bienvenida y Párroco</a>
-                <a href="#horarios" class="block px-4 py-3 rounded-xl text-base font-semibold text-medalla-navy hover:bg-medalla-celeste/15 hover:text-medalla-celesteDark transition">Horarios y 11 Capillas</a>
                 <a href="#sacramentos" class="block px-4 py-3 rounded-xl text-base font-semibold text-medalla-navy hover:bg-medalla-celeste/15 hover:text-medalla-celesteDark transition">Sacramentos y Requisitos</a>
                 <a href="#eventos" class="block px-4 py-3 rounded-xl text-base font-semibold text-medalla-navy hover:bg-medalla-celeste/15 hover:text-medalla-celesteDark transition">Anuncios y Actividades</a>
                 <a href="#multimedia" class="block px-4 py-3 rounded-xl text-base font-semibold text-medalla-navy hover:bg-medalla-celeste/15 hover:text-medalla-celesteDark transition">Misa en Vivo</a>
                 <a href="#contacto" class="block px-4 py-3 rounded-xl text-base font-semibold text-medalla-dorado hover:bg-medalla-dorado/10 transition">Contacto y Ubicación</a>
-                <a href="admin.html" class="block px-4 py-3 rounded-xl text-base font-semibold text-white bg-medalla-navy hover:bg-medalla-celesteDark transition mt-2">
-                    <i class="fa-solid fa-lock text-medalla-dorado mr-2"></i> Panel de Administración
-                </a>
             </div>
         </div>
     </header>
@@ -252,17 +244,13 @@
     <section id="horarios" class="py-20 relative bg-gradient-to-b from-medalla-navy via-[#1A365D] to-medalla-navy text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
-                <span class="text-medalla-doradoLight text-xs font-bold tracking-[0.25em] uppercase">Vida Litúrgica y Territorial</span>
                 <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mt-2 mb-4 gold-divider pb-4">Horarios y Capillas</h2>
-                <p class="text-medalla-celesteLight mt-6 font-light max-w-2xl mx-auto text-sm sm:text-base">
-                    Encuentra el horario de nuestras celebraciones dominicales por sectores, adoración al Santísimo, confesiones y nuestra red de once capillas.
-                </p>
             </div>
 
             <!-- Tarjetas superpuestas hacia la siguiente sección -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 -mb-36">
                 
-                <!-- Tarjeta 1: Horarios Parroquiales (Conectada a Firebase) -->
+                <!-- Tarjeta 1: Horarios Parroquiales (Solo Sede Parroquial, Hora Santa y Confesiones) -->
                 <div class="bg-white text-medalla-navy p-8 md:p-10 rounded-3xl shadow-premium border-b-4 border-medalla-dorado relative group transition hover:-translate-y-1">
                     <div class="absolute -top-6 left-8 w-14 h-14 bg-gradient-to-br from-medalla-dorado to-amber-500 rounded-2xl flex items-center justify-center shadow-gold text-white text-2xl">
                         <i class="fa-regular fa-clock"></i>
@@ -271,12 +259,37 @@
                     <div class="pt-4">
                         <div class="flex items-center justify-between mb-5">
                             <h3 class="font-serif text-2xl sm:text-3xl font-bold text-medalla-navy">Horarios Parroquiales</h3>
-                            <span class="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-medalla-celesteLight text-medalla-celesteDark">Actualizado</span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-medalla-celesteLight text-medalla-celesteDark">Sede Parroquial</span>
                         </div>
                         
                         <!-- Contenedor dinámico conectado a Firestore -->
-                        <div id="fb-horarios-misa" class="whitespace-pre-line text-gray-700 text-sm sm:text-base leading-relaxed bg-medalla-celesteLight/40 p-5 rounded-2xl border border-medalla-celeste/30">
+                        <div id="fb-horarios-misa" class="whitespace-pre-line text-gray-700 text-sm sm:text-base leading-relaxed bg-medalla-celesteLight/40 p-5 rounded-2xl border border-medalla-celeste/30 mb-5">
                             Cargando horarios parroquiales...
+                        </div>
+
+                        <!-- Bloques llamativos de Hora Santa y Confesiones -->
+                        <div class="space-y-3">
+                            <div class="flex bg-medalla-celesteLight/45 rounded-2xl overflow-hidden border border-medalla-celeste/30">
+                                <div class="w-24 bg-medalla-navy text-white flex flex-col items-center justify-center p-3 border-r-4 border-medalla-dorado shrink-0">
+                                    <span class="text-[10px] uppercase tracking-widest font-bold text-medalla-doradoLight">Cada</span>
+                                    <span class="text-sm font-serif font-bold">Jueves</span>
+                                </div>
+                                <div class="p-3.5 flex-1">
+                                    <h4 class="font-bold text-medalla-navy text-sm">Hora Santa / Adoración al Santísimo</h4>
+                                    <p class="text-xs text-gray-600 mt-0.5"><i class="fa-regular fa-clock text-medalla-dorado mr-1"></i> 9:00 a.m. - 5:00 p.m.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex bg-amber-50/70 rounded-2xl overflow-hidden border border-medalla-dorado/30">
+                                <div class="w-24 bg-medalla-celesteDark text-white flex flex-col items-center justify-center p-3 border-r-4 border-medalla-dorado shrink-0">
+                                    <span class="text-[10px] uppercase tracking-widest font-bold text-white/85">Mar - Vie</span>
+                                    <span class="text-sm font-serif font-bold">Tarde</span>
+                                </div>
+                                <div class="p-3.5 flex-1">
+                                    <h4 class="font-bold text-medalla-navy text-sm">Confesiones en la Parroquia</h4>
+                                    <p class="text-xs text-gray-600 mt-0.5"><i class="fa-regular fa-clock text-medalla-dorado mr-1"></i> 3:00 p.m. - 5:00 p.m.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
@@ -286,17 +299,14 @@
                     </div>
                 </div>
 
-                <!-- Tarjeta 2: Las 11 Capillas y Sectores -->
+                <!-- Tarjeta 2: Horarios - Capillas de la Comunidad -->
                 <div class="bg-white text-medalla-navy p-8 md:p-10 rounded-3xl shadow-premium border-b-4 border-medalla-celesteDark relative group transition hover:-translate-y-1 mt-6 lg:mt-6">
                     <div class="absolute -top-6 right-8 w-14 h-14 bg-gradient-to-br from-medalla-celesteDark to-medalla-celeste rounded-2xl flex items-center justify-center shadow-lg text-white text-2xl">
                         <i class="fa-solid fa-place-of-worship"></i>
                     </div>
                     
                     <div class="pt-4">
-                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-medalla-navy mb-2">Parroquia y 11 Capillas</h3>
-                        <p class="text-gray-500 text-sm mb-6">
-                            Cada capilla funciona como un centro de culto religioso y evangelización dentro de nuestra jurisdicción territorial:
-                        </p>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-medalla-navy mb-6">Horarios-Capillas de la Comunidad</h3>
                         
                         <div class="space-y-3.5">
                             <div class="p-4 rounded-2xl bg-medalla-celesteLight/55 border border-medalla-celeste/30">
@@ -310,9 +320,9 @@
                             <div class="p-4 rounded-2xl bg-amber-50/70 border border-medalla-dorado/30">
                                 <div class="flex items-center justify-between mb-1">
                                     <span class="font-bold text-amber-700 text-sm"><i class="fa-solid fa-church text-medalla-dorado mr-1.5"></i> Domingos 9:00 a.m.</span>
-                                    <span class="text-[11px] font-semibold text-medalla-navy bg-white px-2.5 py-0.5 rounded-full">Sede + 3 Capillas</span>
+                                    <span class="text-[11px] font-semibold text-medalla-navy bg-white px-2.5 py-0.5 rounded-full">3 Capillas</span>
                                 </div>
-                                <p class="text-sm text-gray-700 font-medium">Sede Parroquial · Ciudad Bolívar · Milenio · Mocambo</p>
+                                <p class="text-sm text-gray-700 font-medium">Ciudad Bolívar · Milenio · Mocambo</p>
                             </div>
 
                             <div class="p-4 rounded-2xl bg-medalla-celesteLight/55 border border-medalla-celeste/30">
@@ -330,7 +340,7 @@
         </div>
     </section>
 
-    <!-- SACRAMENTOS: ACORDEÓN PREMIUM CON TODOS LOS REQUISITOS DEL PDF -->
+    <!-- SACRAMENTOS: ACORDEÓN PREMIUM CON ICONOS PERSONALIZADOS -->
     <section id="sacramentos" class="pt-52 pb-20 bg-[#FAFCFF]">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -341,7 +351,7 @@
             </div>
 
             <div class="space-y-4">
-                <!-- 1. BAUTISMO -->
+                <!-- 1. BAUTISMO (Ícono de agua intacto) -->
                 <div class="bg-white border border-medalla-celeste/30 rounded-2xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden">
                     <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
                         <div class="flex items-center gap-4">
@@ -382,12 +392,18 @@
                     </div>
                 </div>
 
-                <!-- 2. EUCARISTÍA (PRIMERA COMUNIÓN) -->
+                <!-- 2. EUCARISTÍA (Ícono SVG de Custodia) -->
                 <div class="bg-white border border-medalla-celeste/30 rounded-2xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden">
                     <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
                         <div class="flex items-center gap-4">
                             <div class="w-11 h-11 rounded-full bg-medalla-celesteLight flex items-center justify-center text-medalla-celesteDark group-hover:bg-medalla-celesteDark group-hover:text-white transition">
-                                <i class="fa-solid fa-bread-slice"></i>
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="12" cy="9" r="4.5"></circle>
+                                    <path d="M12 2.5v2"></path>
+                                    <path d="M12 13.5v4.5"></path>
+                                    <path d="M8.5 21h7"></path>
+                                    <path d="M10 18h4"></path>
+                                </svg>
                             </div>
                             <div>
                                 <span class="font-serif font-bold text-xl text-medalla-navy block">2. Eucaristía (Primera Comunión)</span>
@@ -414,7 +430,7 @@
                     </div>
                 </div>
 
-                <!-- 3. CONFIRMACIÓN -->
+                <!-- 3. CONFIRMACIÓN (Ícono de Paloma Blanca) -->
                 <div class="bg-white border border-medalla-celeste/30 rounded-2xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden">
                     <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
                         <div class="flex items-center gap-4">
@@ -446,12 +462,17 @@
                     </div>
                 </div>
 
-                <!-- 4. MATRIMONIO -->
+                <!-- 4. MATRIMONIO (Ícono SVG de Anillos) -->
                 <div class="bg-white border border-medalla-celeste/30 rounded-2xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden">
                     <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
                         <div class="flex items-center gap-4">
                             <div class="w-11 h-11 rounded-full bg-medalla-celesteLight flex items-center justify-center text-medalla-celesteDark group-hover:bg-medalla-celesteDark group-hover:text-white transition">
-                                <i class="fa-solid fa-rings-wedding"></i>
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="9.5" cy="13.5" r="5"></circle>
+                                    <circle cx="14.5" cy="13.5" r="5"></circle>
+                                    <path d="M9.5 8.5l1.2-2.2"></path>
+                                    <path d="M14.5 8.5l1.2-2.2"></path>
+                                </svg>
                             </div>
                             <div>
                                 <span class="font-serif font-bold text-xl text-medalla-navy block">4. Matrimonio</span>
@@ -483,8 +504,8 @@
         </div>
     </section>
 
-    <!-- GRUPOS PASTORALES: TARJETAS INTERACTIVAS CON HOVER -->
-    <section id="pastorales" class="py-20 bg-white">
+    <!-- GRUPOS PASTORALES: CARRUSEL CON LAS 5 PASTORALES -->
+    <section id="pastorales" class="py-20 bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b border-medalla-celesteLight pb-6 gap-4">
                 <div>
@@ -492,29 +513,39 @@
                     <h2 class="font-serif text-3xl md:text-4xl font-bold text-medalla-navy mt-1">Pastorales Parroquiales</h2>
                     <p class="text-gray-500 mt-2 text-sm sm:text-base">Pon tu talento al servicio de Cristo y nuestra comunidad parroquial.</p>
                 </div>
-                <a href="https://wa.me/50764507111" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-medalla-celesteDark font-semibold hover:text-medalla-dorado transition text-sm">
-                    Consultar en oficina parroquial <i class="fa-solid fa-arrow-right-long"></i>
-                </a>
+                <div class="flex items-center gap-4">
+                    <div class="flex gap-2">
+                        <button id="pastoral-prev-btn" aria-label="Pastoral anterior" class="w-10 h-10 rounded-full bg-medalla-celesteLight/60 border border-medalla-celeste/30 text-medalla-navy flex items-center justify-center hover:bg-medalla-navy hover:text-white transition">
+                            <i class="fa-solid fa-arrow-left-long"></i>
+                        </button>
+                        <button id="pastoral-next-btn" aria-label="Siguiente pastoral" class="w-10 h-10 rounded-full bg-medalla-celesteLight/60 border border-medalla-celeste/30 text-medalla-navy flex items-center justify-center hover:bg-medalla-navy hover:text-white transition">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </div>
+                    <a href="https://wa.me/50764507111" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-medalla-celesteDark font-semibold hover:text-medalla-dorado transition text-sm">
+                        Consultar en oficina parroquial <i class="fa-solid fa-arrow-right-long"></i>
+                    </a>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Pastoral Catequética -->
-                <div class="group relative h-72 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500 hover-zoom-img">
-                    <img src="https://images.unsplash.com/photo-1529156069898-49953eb1b5ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Catequesis" class="w-full h-full object-cover">
+            <div id="pastorales-carousel" class="flex overflow-x-auto hide-scrollbar gap-6 carousel-container pb-4">
+                <!-- 1. Pastoral Juvenil -->
+                <div class="min-w-[85%] sm:min-w-[46%] lg:min-w-[23.5%] carousel-item group relative h-72 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500 hover-zoom-img flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953eb1b5ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pastoral Juvenil" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-medalla-navy via-medalla-navy/45 to-transparent opacity-85 group-hover:opacity-95 transition duration-300"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
                         <div class="w-9 h-9 rounded-full bg-medalla-dorado text-white flex items-center justify-center mb-3">
-                            <i class="fa-solid fa-book-bible text-sm"></i>
+                            <i class="fa-solid fa-users text-sm"></i>
                         </div>
-                        <h3 class="font-serif text-xl font-bold text-white mb-1">Catequesis</h3>
+                        <h3 class="font-serif text-xl font-bold text-white mb-1">Pastoral Juvenil</h3>
                         <p class="text-medalla-celesteLight text-xs sm:text-sm font-light leading-relaxed">
-                            Formación de niños, jóvenes y adultos para el Bautismo, Primera Comunión y Confirmación.
+                            Jóvenes que caminan en la fe, la amistad y el servicio misionero en la parroquia y sus capillas.
                         </p>
                     </div>
                 </div>
 
-                <!-- Pastoral Familiar -->
-                <div class="group relative h-72 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500 hover-zoom-img">
+                <!-- 2. Pastoral Familiar -->
+                <div class="min-w-[85%] sm:min-w-[46%] lg:min-w-[23.5%] carousel-item group relative h-72 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500 hover-zoom-img flex-shrink-0">
                     <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pastoral Familiar" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-medalla-navy via-medalla-navy/45 to-transparent opacity-85 group-hover:opacity-95 transition duration-300"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
@@ -523,37 +554,52 @@
                         </div>
                         <h3 class="font-serif text-xl font-bold text-white mb-1">Pastoral Familiar</h3>
                         <p class="text-medalla-celesteLight text-xs sm:text-sm font-light leading-relaxed">
-                            Acompañamiento a novios en la preparación prematrimonial y fortalecimiento de los hogares.
+                            Acompañamiento a novios y matrimonios para fortalecer los hogares como iglesias domésticas.
                         </p>
                     </div>
                 </div>
 
-                <!-- Legión de María y Oración -->
-                <div class="group relative h-72 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500 hover-zoom-img">
-                    <img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Espiritualidad Mariana" class="w-full h-full object-cover">
+                <!-- 3. Pastoral de Salud -->
+                <div class="min-w-[85%] sm:min-w-[46%] lg:min-w-[23.5%] carousel-item group relative h-72 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500 hover-zoom-img flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pastoral de Salud" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-medalla-navy via-medalla-navy/45 to-transparent opacity-85 group-hover:opacity-95 transition duration-300"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
                         <div class="w-9 h-9 rounded-full bg-medalla-dorado text-white flex items-center justify-center mb-3">
-                            <i class="fa-solid fa-hands-praying text-sm"></i>
+                            <i class="fa-solid fa-heart-pulse text-sm"></i>
                         </div>
-                        <h3 class="font-serif text-xl font-bold text-white mb-1">Espiritualidad y Adoración</h3>
+                        <h3 class="font-serif text-xl font-bold text-white mb-1">Pastoral de Salud</h3>
                         <p class="text-medalla-celesteLight text-xs sm:text-sm font-light leading-relaxed">
-                            Adoración al Santísimo los jueves y devoción a nuestra Madre de la Medalla Milagrosa.
+                            Visita, oración y cercanía fraterna con los enfermos y adultos mayores de nuestra comunidad.
                         </p>
                     </div>
                 </div>
 
-                <!-- Misión en Capillas -->
-                <div class="group relative h-72 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500 hover-zoom-img">
-                    <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Evangelización Territorial" class="w-full h-full object-cover">
+                <!-- 4. Pastoral Social -->
+                <div class="min-w-[85%] sm:min-w-[46%] lg:min-w-[23.5%] carousel-item group relative h-72 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500 hover-zoom-img flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pastoral Social" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-medalla-navy via-medalla-navy/45 to-transparent opacity-85 group-hover:opacity-95 transition duration-300"></div>
                     <div class="absolute inset-0 p-6 flex flex-col justify-end">
                         <div class="w-9 h-9 rounded-full bg-medalla-dorado text-white flex items-center justify-center mb-3">
                             <i class="fa-solid fa-hand-holding-heart text-sm"></i>
                         </div>
-                        <h3 class="font-serif text-xl font-bold text-white mb-1">Evangelización en Capillas</h3>
+                        <h3 class="font-serif text-xl font-bold text-white mb-1">Pastoral Social</h3>
                         <p class="text-medalla-celesteLight text-xs sm:text-sm font-light leading-relaxed">
-                            Servicio litúrgico y caritativo coordinado en la sede parroquial y las once capillas.
+                            Solidaridad cristiana y apoyo caritativo a las familias que más lo necesitan en el sector.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5. Monaguillos -->
+                <div class="min-w-[85%] sm:min-w-[46%] lg:min-w-[23.5%] carousel-item group relative h-72 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500 hover-zoom-img flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Monaguillos" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-medalla-navy via-medalla-navy/45 to-transparent opacity-85 group-hover:opacity-95 transition duration-300"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end">
+                        <div class="w-9 h-9 rounded-full bg-medalla-dorado text-white flex items-center justify-center mb-3">
+                            <i class="fa-solid fa-cross text-sm"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-1">Monaguillos</h3>
+                        <p class="text-medalla-celesteLight text-xs sm:text-sm font-light leading-relaxed">
+                            Servicio reverente en el altar y formación litúrgica para niños y jóvenes servidores.
                         </p>
                     </div>
                 </div>
@@ -575,7 +621,7 @@
                     </div>
 
                     <!-- Tarjeta principal editable desde admin.html -->
-                    <div class="bg-white rounded-3xl p-7 shadow-premium border-t-4 border-medalla-dorado mb-6">
+                    <div class="bg-white rounded-3xl p-7 shadow-premium border-t-4 border-medalla-dorado">
                         <div class="flex items-center justify-between mb-4">
                             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-medalla-celesteLight text-medalla-celesteDark text-xs font-bold">
                                 <i class="fa-solid fa-bullhorn text-medalla-dorado"></i> Aviso Vigente
@@ -589,34 +635,9 @@
                             Cargando información actualizada de la parroquia...
                         </p>
                     </div>
-
-                    <!-- Bloques calendario fijos de vida semanal -->
-                    <div class="space-y-3">
-                        <div class="flex bg-white rounded-2xl overflow-hidden shadow-sm border border-medalla-celeste/25">
-                            <div class="w-20 bg-medalla-navy text-white flex flex-col items-center justify-center p-3 border-r-4 border-medalla-dorado">
-                                <span class="text-[10px] uppercase tracking-widest font-bold text-medalla-doradoLight">Cada</span>
-                                <span class="text-sm font-serif font-bold">Jueves</span>
-                            </div>
-                            <div class="p-4 flex-1">
-                                <h4 class="font-bold text-medalla-navy text-sm">Adoración al Santísimo Sacramento</h4>
-                                <p class="text-xs text-gray-500 mt-1"><i class="fa-regular fa-clock text-medalla-dorado mr-1"></i> 9:00 a.m. - 5:00 p.m.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex bg-white rounded-2xl overflow-hidden shadow-sm border border-medalla-celeste/25">
-                            <div class="w-20 bg-medalla-celesteDark text-white flex flex-col items-center justify-center p-3 border-r-4 border-medalla-dorado">
-                                <span class="text-[10px] uppercase tracking-widest font-bold text-white/80">Mar-Vie</span>
-                                <span class="text-sm font-serif font-bold">Tarde</span>
-                            </div>
-                            <div class="p-4 flex-1">
-                                <h4 class="font-bold text-medalla-navy text-sm">Sacramento de la Confesión</h4>
-                                <p class="text-xs text-gray-500 mt-1"><i class="fa-regular fa-clock text-medalla-dorado mr-1"></i> 3:00 p.m. - 5:00 p.m.</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- Columna Derecha: Carrusel de Actividades Realizadas -->
+                <!-- Columna Derecha: Carrusel de Actividades y Vida Parroquial -->
                 <div class="lg:col-span-7 overflow-hidden">
                     <div class="flex justify-between items-end mb-6">
                         <div>
@@ -633,52 +654,84 @@
                         </div>
                     </div>
 
-                    <!-- Track del Carrusel -->
+                    <!-- Track del Carrusel (5 Actividades Solicitadas) -->
                     <div id="carousel" class="flex overflow-x-auto hide-scrollbar gap-6 carousel-container pb-4">
-                        <!-- Slide 1 -->
+                        <!-- 1. Feria Parroquial -->
                         <div class="min-w-[88%] sm:min-w-[48%] carousel-item group">
                             <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-full">
                                 <div class="relative h-56 overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1510590337019-5ef8d3d32116?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Celebración Eucarística" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                                    <img id="img-actividad-feria" src="https://images.unsplash.com/photo-1510590337019-5ef8d3d32116?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Feria Parroquial" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
                                     <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3 py-1 rounded-full shadow-sm text-xs font-bold text-medalla-dorado">
-                                        Eucaristía Dominical
+                                        Convivencia Fraterna
                                     </div>
                                 </div>
                                 <div class="p-6">
-                                    <h4 class="font-serif text-xl font-bold text-medalla-navy mb-2">Comunidad en Oración</h4>
-                                    <p class="text-gray-500 text-sm font-light leading-relaxed">Celebraciones dominicales en nuestra sede parroquial y en las once capillas de los distintos sectores.</p>
+                                    <h4 class="font-serif text-xl font-bold text-medalla-navy mb-2">Feria Parroquial</h4>
+                                    <p class="text-gray-500 text-sm font-light leading-relaxed">Encuentro comunitario de alegría, gastronomía y apoyo para las obras de nuestra parroquia.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Slide 2 -->
+                        <!-- 2. Celebraciones Solemnes de Santos -->
                         <div class="min-w-[88%] sm:min-w-[48%] carousel-item group">
                             <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-full">
                                 <div class="relative h-56 overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1608681285227-2c9339247348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Catequesis Sacramental" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                                    <img id="img-actividad-santos" src="https://images.unsplash.com/photo-1548625361-ecb18cb3e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Celebraciones Solemnes de Santos" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
                                     <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3 py-1 rounded-full shadow-sm text-xs font-bold text-medalla-dorado">
-                                        Formación en la Fe
+                                        Liturgia y Devoción
                                     </div>
                                 </div>
                                 <div class="p-6">
-                                    <h4 class="font-serif text-xl font-bold text-medalla-navy mb-2">Catequesis y Sacramentos</h4>
-                                    <p class="text-gray-500 text-sm font-light leading-relaxed">Preparación para el Bautismo, Primera Comunión, Confirmación y Matrimonio junto a las familias.</p>
+                                    <h4 class="font-serif text-xl font-bold text-medalla-navy mb-2">Celebraciones Solemnes de Santos</h4>
+                                    <p class="text-gray-500 text-sm font-light leading-relaxed">Fiestas patronales y solemnidades que avivan la devoción mariana y el testimonio de los santos.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Slide 3 -->
+                        <!-- 3. Misiones en las Comunidades -->
                         <div class="min-w-[88%] sm:min-w-[48%] carousel-item group">
                             <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-full">
                                 <div class="relative h-56 overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1543329065-27f99ff9d638?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Misión Parroquial" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                                    <img id="img-actividad-misiones" src="https://images.unsplash.com/photo-1543329065-27f99ff9d638?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Misiones en las Comunidades" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
                                     <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3 py-1 rounded-full shadow-sm text-xs font-bold text-medalla-dorado">
-                                        Misión Territorial
+                                        Evangelización
                                     </div>
                                 </div>
                                 <div class="p-6">
-                                    <h4 class="font-serif text-xl font-bold text-medalla-navy mb-2">Unidos desde 1949</h4>
-                                    <p class="text-gray-500 text-sm font-light leading-relaxed">Más de siete décadas sirviendo y evangelizando con alegría en Alcalde Díaz y sus comunidades.</p>
+                                    <h4 class="font-serif text-xl font-bold text-medalla-navy mb-2">Misiones en las Comunidades</h4>
+                                    <p class="text-gray-500 text-sm font-light leading-relaxed">Salida misionera a los hogares y capillas de Alcalde Díaz llevando la Palabra y cercanía de Cristo.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. Dramatización en Semana Santa de la Pasión de Cristo -->
+                        <div class="min-w-[88%] sm:min-w-[48%] carousel-item group">
+                            <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-full">
+                                <div class="relative h-56 overflow-hidden">
+                                    <img id="img-actividad-pasion" src="https://images.unsplash.com/photo-1507692049790-de58290a4334?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dramatización en Semana Santa de la Pasión de Cristo" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                                    <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3 py-1 rounded-full shadow-sm text-xs font-bold text-medalla-dorado">
+                                        Semana Santa
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h4 class="font-serif text-xl font-bold text-medalla-navy mb-2">Dramatización en Semana Santa de la Pasión de Cristo</h4>
+                                    <p class="text-gray-500 text-sm font-light leading-relaxed">Representación viva de la Pasión del Señor que invita a la oración, reflexión y conversión.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5. Encuentros Juveniles -->
+                        <div class="min-w-[88%] sm:min-w-[48%] carousel-item group">
+                            <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-full">
+                                <div class="relative h-56 overflow-hidden">
+                                    <img id="img-actividad-jovenes" src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Encuentros Juveniles" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                                    <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3 py-1 rounded-full shadow-sm text-xs font-bold text-medalla-dorado">
+                                        Juventud en Cristo
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h4 class="font-serif text-xl font-bold text-medalla-navy mb-2">Encuentros Juveniles</h4>
+                                    <p class="text-gray-500 text-sm font-light leading-relaxed">Espacios de formación, alabanza y fraternidad para animar la fe de los jóvenes parroquiales.</p>
                                 </div>
                             </div>
                         </div>
@@ -696,38 +749,45 @@
                 <i class="fa-brands fa-youtube text-4xl text-red-500 mb-3"></i>
                 <h2 class="font-serif text-3xl md:text-5xl font-bold mb-4 gold-divider pb-4">Transmisiones en Vivo</h2>
                 <p class="text-medalla-celesteLight mt-6 font-light max-w-2xl mx-auto text-sm sm:text-base">
-                    Únete cada domingo a nuestra transmisión oficial por YouTube y comparte la Eucaristía desde cualquier lugar.
+                    Únete a nuestras transmisiones oficiales en MedallaTV por YouTube y comparte la Eucaristía desde cualquier lugar.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-                <!-- Reproductor Principal -->
-                <div class="lg:col-span-2 bg-black rounded-3xl overflow-hidden shadow-2xl border border-white/15 relative">
-                    <div class="absolute top-4 left-4 z-10 bg-red-600 text-white text-xs font-bold px-3.5 py-1.5 rounded-full flex items-center gap-2 shadow-lg">
-                        <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span> DOMINGOS EN VIVO · YOUTUBE
+                <!-- Acceso Directo a Transmisiones en Vivo de MedallaTV -->
+                <div class="lg:col-span-2 bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-8 sm:p-10 shadow-2xl border border-white/15 flex flex-col justify-between min-h-[300px]">
+                    <div>
+                        <div class="inline-flex items-center gap-2 bg-red-600 text-white text-xs font-bold px-3.5 py-1.5 rounded-full shadow-lg mb-5">
+                            <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span> MEDALLATV · TRANSMISIONES EN VIVO
+                        </div>
+                        <h3 class="font-serif text-2xl sm:text-4xl font-bold text-white mb-3">
+                            Celebraciones y Transmisiones en Directo
+                        </h3>
+                        <p class="text-medalla-celesteLight text-sm sm:text-base font-light leading-relaxed max-w-xl">
+                            Accede directamente a la pestaña de transmisiones en vivo de nuestro canal oficial <strong class="text-white">@medallatv2528</strong> para ver las misas y celebraciones en tiempo real sin errores de reproducción incrustada.
+                        </p>
                     </div>
-                    
-                    <div class="relative w-full h-0 pb-[56.25%]">
-                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/live_stream?channel=UC4R8DWoMoI7CAwX8_LjQHig" title="Misa Dominical en Vivo - Parroquia Virgen de la Medalla Milagrosa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    <div class="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center gap-4">
+                        <a href="https://www.youtube.com/@medallatv2528/streams" target="_blank" rel="noopener noreferrer" class="bg-red-600 hover:bg-red-700 text-white px-7 py-3.5 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider transition shadow-lg inline-flex items-center gap-2.5">
+                            <i class="fa-brands fa-youtube text-lg"></i> Ver Transmisiones en Vivo
+                        </a>
+                        <span class="text-xs text-medalla-celesteLight">Canal oficial: youtube.com/@medallatv2528/streams</span>
                     </div>
                 </div>
 
-                <!-- Tarjeta Lateral de Horarios Dominicales y Acceso -->
+                <!-- Tarjeta Lateral de Celebración Dominical (Sin horarios de adoración ni confesiones) -->
                 <div class="bg-white/5 border border-white/10 rounded-3xl p-7 flex flex-col justify-between space-y-6">
                     <div>
                         <h3 class="text-xl font-serif font-bold text-medalla-doradoLight mb-3 flex items-center gap-2">
                             <i class="fa-solid fa-tower-broadcast text-medalla-dorado"></i> Celebración Dominical
                         </h3>
-                        <p class="text-sm text-medalla-celesteLight font-light leading-relaxed mb-5">
+                        <p class="text-sm text-medalla-celesteLight font-light leading-relaxed">
                             Nuestras misas dominicales se celebran a las <strong class="text-white">7:00 a.m.</strong>, <strong class="text-white">9:00 a.m.</strong> (Sede Parroquial) y <strong class="text-white">11:00 a.m.</strong> en nuestras comunidades.
                         </p>
-                        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-xs text-gray-300 space-y-2">
-                            <p><i class="fa-solid fa-calendar-check text-medalla-dorado mr-2"></i><strong>Adoración al Santísimo:</strong> Jueves, 9:00 am - 5:00 pm</p>
-                            <p><i class="fa-solid fa-hands-praying text-medalla-dorado mr-2"></i><strong>Confesiones:</strong> Martes a Viernes, 3:00 pm - 5:00 pm</p>
-                        </div>
                     </div>
 
-                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 text-center border border-red-500/60 hover:bg-red-600 text-white rounded-xl transition font-semibold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2">
+                    <a href="https://www.youtube.com/@medallatv2528/streams" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 text-center border border-red-500/60 hover:bg-red-600 text-white rounded-xl transition font-semibold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2">
                         <i class="fa-brands fa-youtube text-lg"></i> Ir al Canal de YouTube
                     </a>
                 </div>
@@ -735,7 +795,7 @@
         </div>
     </section>
 
-    <!-- FOOTER: CONTACTO, HORARIO DE OFICINA Y MAPA DE ALCALDE DÍAZ -->
+    <!-- FOOTER: CONTACTO, HORARIO DE OFICINA Y MAPA REAL -->
     <footer id="contacto" class="bg-white border-t-[6px] border-medalla-celeste pt-20 pb-10 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
@@ -760,7 +820,7 @@
                         <a href="mailto:medallamilagrosaalcaldediaz@gmail.com" aria-label="Correo" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-medalla-celesteDark hover:bg-medalla-celesteDark hover:text-white hover:border-transparent transition-all shadow-sm">
                             <i class="fa-regular fa-envelope"></i>
                         </a>
-                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-red-600 hover:bg-red-600 hover:text-white hover:border-transparent transition-all shadow-sm">
+                        <a href="https://www.youtube.com/@medallatv2528/streams" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-red-600 hover:bg-red-600 hover:text-white hover:border-transparent transition-all shadow-sm">
                             <i class="fa-brands fa-youtube"></i>
                         </a>
                     </div>
@@ -818,11 +878,11 @@
                     </div>
                 </div>
 
-                <!-- Columna 4: Google Maps Alcalde Díaz, Panamá -->
+                <!-- Columna 4: Google Maps Real Parroquia Virgen de la Medalla Milagrosa -->
                 <div>
                     <h4 class="font-serif font-bold text-medalla-navy text-xl mb-5">Ubicación</h4>
                     <div class="w-full h-48 bg-gray-100 rounded-2xl overflow-hidden shadow-inner border-2 border-medalla-celesteLight">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15754.883106768875!2d-79.5612!3d9.1318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca97c1f9c2c6b%3A0x6b2c2a3a7b7a7b7a!2sAlcalde%20D%C3%ADaz%2C%20Panam%C3%A1!5e0!3m2!1ses-419!2spa!4v1700000000000!5m2!1ses-419!2spa" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación Parroquia Virgen de la Medalla Milagrosa, Alcalde Díaz"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.36772903936!2d-79.56056922600311!3d9.121219287540722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fab5789245d594d%3A0xfcea7ad0ad29a29!2sParroquia%20Virgen%20de%20la%20Medalla%20Milagrosa!5e0!3m2!1ses-419!2spa!4v1795550751617!5m2!1ses-419!2spa" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Ubicación Parroquia Virgen de la Medalla Milagrosa"></iframe>
                     </div>
                 </div>
             </div>
@@ -930,6 +990,24 @@
         prevBtn.addEventListener('click', () => {
             carousel.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
         });
+
+        // Carrusel Fluido de Pastorales
+        const pastoralesCarousel = document.getElementById('pastorales-carousel');
+        const pastoralPrevBtn = document.getElementById('pastoral-prev-btn');
+        const pastoralNextBtn = document.getElementById('pastoral-next-btn');
+
+        const getPastoralScrollAmount = () => {
+            const item = pastoralesCarousel.querySelector('.carousel-item');
+            return item ? item.offsetWidth + 24 : 320;
+        };
+
+        pastoralNextBtn.addEventListener('click', () => {
+            pastoralesCarousel.scrollBy({ left: getPastoralScrollAmount(), behavior: 'smooth' });
+        });
+
+        pastoralPrevBtn.addEventListener('click', () => {
+            pastoralesCarousel.scrollBy({ left: -getPastoralScrollAmount(), behavior: 'smooth' });
+        });
     </script>
 
     <!-- CONEXIÓN EN VIVO A FIREBASE FIRESTORE -->
@@ -953,7 +1031,7 @@
         // Datos reales extraídos del PDF como respaldo automático
         const fallbackData = {
             mensajeParroco: "Muchas gracias por su interés en nuestra Parroquia Virgen de la Medalla Milagrosa. Ya sea que esté de visita, que desee hacer de ella su comunidad, o que simplemente le interese saber más sobre nuestra parroquia, nos da mucho gusto tenerlo aquí.\n\nNuestra parroquia se fundó en 1949. En la actualidad, junto con otras once capillas forma una amplia comunidad eclesial territorial en la que el párroco es el pastor principal y cada capilla funciona como un centro de culto religioso y evangelización dentro de esa misma jurisdicción.\n\nLa parroquia se trata de una comunidad de comunión, participación, misión, una familia espiritual cuyos miembros se comunican, se apoyan y se aman mutuamente. Puede ser un lugar para el propio crecimiento espiritual y para poner la fe en acción, sirviendo a Cristo con el propio talento.",
-            horariosMisa: "1. Celebración dominical:\n• 7:00 am: Las Malvinas, Villa Grecia, San Pablo, Quebrada Ancha\n• 9:00 am: Parroquia, Ciudad Bolívar, Milenio, Mocambo\n• 11:00 am: Ciudad El Amanecer, La Esperanza, Villa Nueva, El Tecal\n\n2. Adoración al Santísimo Sacramento:\n• Los Jueves, 9:00 am - 5:00 pm\n\n3. Confesión:\n• Martes a Viernes, 3:00 pm - 5:00 pm",
+            horariosMisa: "Celebración dominical en la Parroquia:\n• 9:00 am: Parroquia Virgen de la Medalla Milagrosa",
             tituloAnuncio: "Anuncios Parroquiales",
             descAnuncio: "Atención en despacho parroquial (Calle Central & Calle Colón, Alcalde Díaz):\n• Lunes a Viernes: 2:00 pm - 6:00 pm\n• Sábado: 9:00 am - 12:00 pm (Domingo: cerrado)\n\nPara inscripciones a sacramentos o consultas: Tel. 318 0749 | WhatsApp (mensaje): +507 6450 7111."
         };
