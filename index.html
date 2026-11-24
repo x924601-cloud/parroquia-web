@@ -123,6 +123,7 @@
                     <a href="#inicio" class="text-sm font-semibold text-medalla-navy hover:text-medalla-celesteDark transition duration-300">Inicio</a>
                     <a href="#bienvenida" class="text-sm font-semibold text-medalla-navy hover:text-medalla-celesteDark transition duration-300">Bienvenida</a>
                     <a href="#sacramentos" class="text-sm font-semibold text-medalla-navy hover:text-medalla-celesteDark transition duration-300">Sacramentos</a>
+                    <a href="#pastorales" class="text-sm font-semibold text-medalla-navy hover:text-medalla-celesteDark transition duration-300">Pastorales</a>
                     <a href="#eventos" class="text-sm font-semibold text-medalla-navy hover:text-medalla-celesteDark transition duration-300">Anuncios</a>
                     <a href="#multimedia" class="text-sm font-semibold text-medalla-navy hover:text-medalla-celesteDark transition duration-300">En Vivo</a>
                     <a href="#contacto" class="px-5 py-2.5 rounded-full border border-medalla-dorado text-medalla-dorado hover:bg-medalla-dorado hover:text-white transition duration-300 text-sm font-bold shadow-sm">Contacto</a>
@@ -143,6 +144,7 @@
                 <a href="#inicio" class="block px-4 py-3 rounded-xl text-base font-semibold text-medalla-navy hover:bg-medalla-celeste/15 hover:text-medalla-celesteDark transition">Inicio</a>
                 <a href="#bienvenida" class="block px-4 py-3 rounded-xl text-base font-semibold text-medalla-navy hover:bg-medalla-celeste/15 hover:text-medalla-celesteDark transition">Bienvenida y Párroco</a>
                 <a href="#sacramentos" class="block px-4 py-3 rounded-xl text-base font-semibold text-medalla-navy hover:bg-medalla-celeste/15 hover:text-medalla-celesteDark transition">Sacramentos y Requisitos</a>
+                <a href="#pastorales" class="block px-4 py-3 rounded-xl text-base font-semibold text-medalla-navy hover:bg-medalla-celeste/15 hover:text-medalla-celesteDark transition">Pastorales Parroquiales</a>
                 <a href="#eventos" class="block px-4 py-3 rounded-xl text-base font-semibold text-medalla-navy hover:bg-medalla-celeste/15 hover:text-medalla-celesteDark transition">Anuncios y Actividades</a>
                 <a href="#multimedia" class="block px-4 py-3 rounded-xl text-base font-semibold text-medalla-navy hover:bg-medalla-celeste/15 hover:text-medalla-celesteDark transition">Misa en Vivo</a>
                 <a href="#contacto" class="block px-4 py-3 rounded-xl text-base font-semibold text-medalla-dorado hover:bg-medalla-dorado/10 transition">Contacto y Ubicación</a>
@@ -515,25 +517,25 @@
     <!-- GRUPOS PASTORALES: CARRUSEL CON LAS 5 PASTORALES -->
     <section id="pastorales" class="py-20 bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b border-medalla-celesteLight pb-6 gap-4">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 border-b border-medalla-celesteLight pb-6 gap-4">
                 <div>
                     <span class="text-medalla-dorado text-xs font-bold uppercase tracking-widest">Servicio y Evangelización</span>
                     <h2 class="font-serif text-3xl md:text-4xl font-bold text-medalla-navy mt-1">Pastorales Parroquiales</h2>
                     <p class="text-gray-500 mt-2 text-sm sm:text-base">Pon tu talento al servicio de Cristo y nuestra comunidad parroquial.</p>
                 </div>
-                <div class="flex items-center gap-4">
-                    <div class="flex gap-2">
-                        <button id="pastoral-prev-btn" aria-label="Pastoral anterior" class="w-10 h-10 rounded-full bg-medalla-celesteLight/60 border border-medalla-celeste/30 text-medalla-navy flex items-center justify-center hover:bg-medalla-navy hover:text-white transition">
-                            <i class="fa-solid fa-arrow-left-long"></i>
-                        </button>
-                        <button id="pastoral-next-btn" aria-label="Siguiente pastoral" class="w-10 h-10 rounded-full bg-medalla-celesteLight/60 border border-medalla-celeste/30 text-medalla-navy flex items-center justify-center hover:bg-medalla-navy hover:text-white transition">
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                        </button>
-                    </div>
-                    <a href="https://wa.me/50764507111" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-medalla-celesteDark font-semibold hover:text-medalla-dorado transition text-sm">
-                        Consultar en oficina parroquial <i class="fa-solid fa-arrow-right-long"></i>
-                    </a>
-                </div>
+                <a href="https://wa.me/50764507111" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-medalla-celesteDark font-semibold hover:text-medalla-dorado transition text-sm">
+                    Consultar en oficina parroquial <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+            </div>
+
+            <!-- Botones del carrusel en la esquina superior derecha, arriba de las tarjetas -->
+            <div class="flex justify-end gap-2.5 mb-5">
+                <button id="pastoral-prev-btn" aria-label="Pastoral anterior" class="w-10 h-10 rounded-full border border-medalla-celeste/50 bg-white flex items-center justify-center hover:bg-medalla-celesteLight text-medalla-navy transition shadow-sm">
+                    <i class="fa-solid fa-chevron-left text-xs"></i>
+                </button>
+                <button id="pastoral-next-btn" aria-label="Siguiente pastoral" class="w-10 h-10 rounded-full border border-medalla-celeste/50 bg-white flex items-center justify-center hover:bg-medalla-celesteLight text-medalla-navy transition shadow-sm">
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
             </div>
 
             <div id="pastorales-carousel" class="flex overflow-x-auto hide-scrollbar gap-6 carousel-container pb-4">
@@ -596,21 +598,20 @@
                         </p>
                     </div>
                 </div>
-
-                <!-- 5. Monaguillos -->
-                <div class="min-w-[85%] sm:min-w-[46%] lg:min-w-[23.5%] carousel-item group relative h-72 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500 hover-zoom-img flex-shrink-0">
-                    <img src="img/monaguillos.jpeg" onerror="if(this.src.endsWith('.jpeg'))this.src='img/monaguillos.jpg';" alt="Monaguillos" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-medalla-navy via-medalla-navy/45 to-transparent opacity-85 group-hover:opacity-95 transition duration-300"></div>
-                    <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <div class="w-9 h-9 rounded-full bg-medalla-dorado text-white flex items-center justify-center mb-3">
-                            <i class="fa-solid fa-cross text-sm"></i>
+                    <!-- 5. Monaguillos -->
+                    <div class="min-w-[85%] sm:min-w-[46%] lg:min-w-[23.5%] carousel-item group relative h-72 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500 hover-zoom-img flex-shrink-0">
+                        <img src="img/monaguillos.jpeg" onerror="if(this.src.endsWith('.jpeg'))this.src='img/monaguillos.jpg';" alt="Monaguillos" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-medalla-navy via-medalla-navy/45 to-transparent opacity-85 group-hover:opacity-95 transition duration-300"></div>
+                        <div class="absolute inset-0 p-6 flex flex-col justify-end">
+                            <div class="w-9 h-9 rounded-full bg-medalla-dorado text-white flex items-center justify-center mb-3">
+                                <i class="fa-solid fa-cross text-sm"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-white mb-1">Monaguillos</h3>
+                            <p class="text-medalla-celesteLight text-xs sm:text-sm font-light leading-relaxed">
+                                Servicio reverente en el altar y formación litúrgica para niños y jóvenes servidores.
+                            </p>
                         </div>
-                        <h3 class="font-serif text-xl font-bold text-white mb-1">Monaguillos</h3>
-                        <p class="text-medalla-celesteLight text-xs sm:text-sm font-light leading-relaxed">
-                            Servicio reverente en el altar y formación litúrgica para niños y jóvenes servidores.
-                        </p>
                     </div>
-                </div>
             </div>
         </div>
     </section>
@@ -653,93 +654,62 @@
                             <h2 class="font-serif text-3xl font-bold text-medalla-navy mt-1">Actividades y Vida Parroquial</h2>
                         </div>
                         <div class="flex gap-2">
-                            <button id="prev-btn" aria-label="Anterior" class="w-10 h-10 rounded-full bg-white border border-gray-200 shadow-sm text-medalla-navy flex items-center justify-center hover:bg-medalla-navy hover:text-white transition">
-                                <i class="fa-solid fa-arrow-left-long"></i>
+                            <button id="prev-btn" aria-label="Anterior" class="w-10 h-10 rounded-full border border-medalla-celeste/50 bg-white flex items-center justify-center hover:bg-medalla-celesteLight text-medalla-navy transition shadow-sm">
+                                <i class="fa-solid fa-chevron-left text-xs"></i>
                             </button>
-                            <button id="next-btn" aria-label="Siguiente" class="w-10 h-10 rounded-full bg-white border border-gray-200 shadow-sm text-medalla-navy flex items-center justify-center hover:bg-medalla-navy hover:text-white transition">
-                                <i class="fa-solid fa-arrow-right-long"></i>
+                            <button id="next-btn" aria-label="Siguiente" class="w-10 h-10 rounded-full border border-medalla-celeste/50 bg-white flex items-center justify-center hover:bg-medalla-celesteLight text-medalla-navy transition shadow-sm">
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
                             </button>
                         </div>
                     </div>
 
                     <!-- Track del Carrusel (5 Actividades Solicitadas) -->
                     <div id="carousel" class="flex overflow-x-auto hide-scrollbar gap-6 carousel-container pb-4">
-                        <!-- 1. Feria Parroquial -->
-                        <div class="min-w-[88%] sm:min-w-[48%] carousel-item group">
-                            <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-full">
-                                <div class="relative h-56 overflow-hidden">
-                                    <img id="img-actividad-feria" src="img/feria-parroquial.jpeg" onerror="if(this.src.endsWith('.jpeg'))this.src='img/feria-parroquial.jpg';" alt="Feria Parroquial" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
-                                    <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3 py-1 rounded-full shadow-sm text-xs font-bold text-medalla-dorado">
-                                        Convivencia Fraterna
+                            <!-- 1. Feria Parroquial -->
+                            <div class="min-w-[88%] sm:min-w-[48%] carousel-item group">
+                                <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-full">
+                                    <div class="relative h-56 overflow-hidden">
+                                        <img id="img-actividad-feria" src="img/feria-parroquial.jpeg" onerror="if(this.src.endsWith('.jpeg'))this.src='img/feria-parroquial.jpg';" alt="Feria Parroquial" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                                        <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3 py-1 rounded-full shadow-sm text-xs font-bold text-medalla-dorado">
+                                            Convivencia Fraterna
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-serif text-xl font-bold text-medalla-navy mb-2">Feria Parroquial</h4>
-                                    <p class="text-gray-500 text-sm font-light leading-relaxed">Encuentro comunitario de alegría, gastronomía y apoyo para las obras de nuestra parroquia.</p>
+                                    <div class="p-6">
+                                        <h4 class="font-serif text-xl font-bold text-medalla-navy mb-2">Feria Parroquial</h4>
+                                        <p class="text-gray-500 text-sm font-light leading-relaxed">Encuentro comunitario de alegría, gastronomía y apoyo para las obras de nuestra parroquia.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- 2. Celebraciones Solemnes de Santos -->
-                        <div class="min-w-[88%] sm:min-w-[48%] carousel-item group">
-                            <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-full">
-                                <div class="relative h-56 overflow-hidden">
-                                    <img id="img-actividad-santos" src="img/celebraciones-santos.jpeg" onerror="if(this.src.endsWith('.jpeg'))this.src='img/celebraciones-santos.jpg';" alt="Celebraciones Solemnes de Santos" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
-                                    <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3 py-1 rounded-full shadow-sm text-xs font-bold text-medalla-dorado">
-                                        Liturgia y Devoción
+                            <!-- 2. Celebraciones Solemnes -->
+                            <div class="min-w-[88%] sm:min-w-[48%] carousel-item group">
+                                <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-full">
+                                    <div class="relative h-56 overflow-hidden">
+                                        <img id="img-actividad-santos" src="img/celebraciones-santos.jpeg" onerror="if(this.src.endsWith('.jpeg'))this.src='img/celebraciones-santos.jpg';" alt="Celebraciones Solemnes" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                                        <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3 py-1 rounded-full shadow-sm text-xs font-bold text-medalla-dorado">
+                                            Liturgia y Devoción
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-serif text-xl font-bold text-medalla-navy mb-2">Celebraciones Solemnes de Santos</h4>
-                                    <p class="text-gray-500 text-sm font-light leading-relaxed">Fiestas patronales y solemnidades que avivan la devoción mariana y el testimonio de los santos.</p>
+                                    <div class="p-6">
+                                        <h4 class="font-serif text-xl font-bold text-medalla-navy mb-2">Celebraciones Solemnes</h4>
+                                        <p class="text-gray-500 text-sm font-light leading-relaxed">Fiestas patronales y solemnidades que avivan la devoción mariana y el testimonio de los santos.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- 3. Misiones en las Comunidades -->
-                        <div class="min-w-[88%] sm:min-w-[48%] carousel-item group">
-                            <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-full">
-                                <div class="relative h-56 overflow-hidden">
-                                    <img id="img-actividad-misiones" src="img/misiones-comunidades.jpeg" onerror="if(this.src.endsWith('.jpeg'))this.src='img/misiones-comunidades.jpg';" alt="Misiones en las Comunidades" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
-                                    <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3 py-1 rounded-full shadow-sm text-xs font-bold text-medalla-dorado">
-                                        Evangelización
+                            <!-- 3. Misiones en las Comunidades -->
+                            <div class="min-w-[88%] sm:min-w-[48%] carousel-item group">
+                                <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-full">
+                                    <div class="relative h-56 overflow-hidden">
+                                        <img id="img-actividad-misiones" src="img/misiones-comunidades.jpeg" onerror="if(this.src.endsWith('.jpeg'))this.src='img/misiones-comunidades.jpg';" alt="Misiones en las Comunidades" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                                        <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3 py-1 rounded-full shadow-sm text-xs font-bold text-medalla-dorado">
+                                            Evangelización
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-serif text-xl font-bold text-medalla-navy mb-2">Misiones en las Comunidades</h4>
-                                    <p class="text-gray-500 text-sm font-light leading-relaxed">Salida misionera a los hogares y capillas de Alcalde Díaz llevando la Palabra y cercanía de Cristo.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 4. Dramatización en Semana Santa de la Pasión de Cristo -->
-                        <div class="min-w-[88%] sm:min-w-[48%] carousel-item group">
-                            <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-full">
-                                <div class="relative h-56 overflow-hidden">
-                                    <img id="img-actividad-pasion" src="img/dramatizacion.jpeg" onerror="if(this.src.endsWith('.jpeg'))this.src='img/dramatizacion.jpg';" alt="Dramatización en Semana Santa de la Pasión de Cristo" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
-                                    <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3 py-1 rounded-full shadow-sm text-xs font-bold text-medalla-dorado">
-                                        Semana Santa
+                                    <div class="p-6">
+                                        <h4 class="font-serif text-xl font-bold text-medalla-navy mb-2">Misiones en las Comunidades</h4>
+                                        <p class="text-gray-500 text-sm font-light leading-relaxed">Salida misionera a los hogares y capillas de Alcalde Díaz llevando la Palabra y cercanía de Cristo.</p>
                                     </div>
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-serif text-xl font-bold text-medalla-navy mb-2">Dramatización en Semana Santa de la Pasión de Cristo</h4>
-                                    <p class="text-gray-500 text-sm font-light leading-relaxed">Representación viva de la Pasión del Señor que invita a la oración, reflexión y conversión.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 5. Encuentros Juveniles -->
-                        <div class="min-w-[88%] sm:min-w-[48%] carousel-item group">
-                            <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-full">
-                                <div class="relative h-56 overflow-hidden">
-                                    <img id="img-actividad-jovenes" src="img/encuentros-juveniles.jpeg" onerror="if(this.src.endsWith('.jpeg'))this.src='img/encuentros-juveniles.jpg';" alt="Encuentros Juveniles" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
-                                    <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3 py-1 rounded-full shadow-sm text-xs font-bold text-medalla-dorado">
-                                        Juventud en Cristo
-                                    </div>
-                                </div>
-                                <div class="p-6">
-                                    <h4 class="font-serif text-xl font-bold text-medalla-navy mb-2">Encuentros Juveniles</h4>
-                                    <p class="text-gray-500 text-sm font-light leading-relaxed">Espacios de formación, alabanza y fraternidad para animar la fe de los jóvenes parroquiales.</p>
                                 </div>
                             </div>
                         </div>
