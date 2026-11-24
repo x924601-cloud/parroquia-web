@@ -154,8 +154,8 @@
     <section id="inicio" class="relative min-h-[90vh] flex items-center justify-center pt-24 overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="img/parroquia.jpeg" onerror="if(this.src.endsWith('.jpeg'))this.src='img/parroquia.jpg';" alt="Templo Parroquia Virgen de la Medalla Milagrosa" class="w-full h-full object-cover object-center">
-            <div class="absolute inset-0 bg-gradient-to-r from-medalla-navy/95 via-medalla-navy/80 to-medalla-celesteDark/35"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#FAFCFF] via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-medalla-navy/95 via-medalla-navy/80 to-medalla-celesteDark/40"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-medalla-navy/75 via-medalla-navy/20 to-transparent"></div>
         </div>
         
         <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
@@ -327,7 +327,7 @@
 
                             <div class="p-4 rounded-2xl bg-medalla-celesteLight/55 border border-medalla-celeste/30">
                                 <div class="flex items-center justify-between mb-1">
-                                    <span class="font-bold text-medalla-celesteDark text-sm"><i class="fa-solid fa-bells text-medalla-dorado mr-1.5"></i> Domingos 11:00 a.m.</span>
+                                    <span class="font-bold text-medalla-celesteDark text-sm"><i class="fa-solid fa-cross text-medalla-dorado mr-1.5"></i> Domingos 11:00 a.m.</span>
                                     <span class="text-[11px] font-semibold text-medalla-navy bg-white px-2.5 py-0.5 rounded-full">4 Capillas</span>
                                 </div>
                                 <p class="text-sm text-gray-700 font-medium">Ciudad El Amanecer · La Esperanza · Villa Nueva · El Tecal</p>
@@ -341,29 +341,31 @@
     </section>
 
     <!-- SACRAMENTOS: ACORDEÓN PREMIUM CON ICONOS PERSONALIZADOS -->
-    <section id="sacramentos" class="pt-52 pb-20 bg-[#FAFCFF]">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="text-medalla-celesteDark text-xs font-bold tracking-[0.25em] uppercase">Vida Sacramental</span>
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-medalla-navy mt-2 mb-4">Sacramentos y Requisitos</h2>
-                <div class="w-16 h-1 bg-medalla-dorado mx-auto mb-4"></div>
-                <p class="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto">Selecciona cada sacramento para conocer su significado espiritual y la documentación requerida para su inscripción.</p>
+    <section id="sacramentos" class="pt-52 pb-24 bg-gradient-to-b from-medalla-celesteLight/55 via-[#F4F9FC] to-[#FAFCFF] relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12 bg-white/85 backdrop-blur-sm border border-medalla-celeste/35 rounded-3xl p-8 shadow-sm">
+                <span class="inline-block px-4 py-1 rounded-full bg-medalla-celesteLight text-medalla-celesteDark text-xs font-bold tracking-[0.2em] uppercase">Vida Sacramental</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-medalla-navy mt-3 mb-4">Sacramentos y Requisitos</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-medalla-celesteDark via-medalla-dorado to-medalla-celesteDark mx-auto mb-4 rounded-full"></div>
+                <p class="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">Selecciona cada sacramento para conocer su significado espiritual y la documentación requerida para su inscripción.</p>
             </div>
 
             <div class="space-y-4">
                 <!-- 1. BAUTISMO (Ícono de agua intacto) -->
-                <div class="bg-white border border-medalla-celeste/30 rounded-2xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden">
+                <div class="bg-white border border-medalla-celeste/45 border-l-4 border-l-medalla-celesteDark rounded-2xl shadow-sm hover:shadow-premium transition duration-300 overflow-hidden">
                     <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
                         <div class="flex items-center gap-4">
-                            <div class="w-11 h-11 rounded-full bg-medalla-celesteLight flex items-center justify-center text-medalla-celesteDark group-hover:bg-medalla-celesteDark group-hover:text-white transition">
-                                <i class="fa-solid fa-water"></i>
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-medalla-celesteLight to-sky-100 border border-medalla-celeste/40 flex items-center justify-center text-medalla-celesteDark group-hover:bg-gradient-to-br group-hover:from-medalla-navy group-hover:to-medalla-celesteDark group-hover:text-white transition shadow-sm">
+                                <i class="fa-solid fa-water text-lg"></i>
                             </div>
                             <div>
                                 <span class="font-serif font-bold text-xl text-medalla-navy block">1. Bautismo</span>
-                                <span class="text-xs text-gray-400">Inicio y fundamento de toda la vida cristiana</span>
+                                <span class="text-xs text-medalla-celesteDark/80 font-medium">Inicio y fundamento de toda la vida cristiana</span>
                             </div>
                         </div>
-                        <i class="fa-solid fa-chevron-down text-gray-400 group-hover:text-medalla-dorado transition-transform duration-300 transform"></i>
+                        <span class="w-8 h-8 rounded-full bg-medalla-celesteLight/60 flex items-center justify-center text-medalla-navy group-hover:bg-medalla-dorado/20 transition">
+                            <i class="fa-solid fa-chevron-down text-xs group-hover:text-medalla-dorado transition-transform duration-300 transform"></i>
+                        </span>
                     </button>
                     <div class="accordion-content bg-[#FAFCFF] border-t border-gray-100">
                         <div class="p-6 sm:px-10 sm:py-8 text-gray-600 space-y-5 text-sm sm:text-base">
@@ -393,10 +395,10 @@
                 </div>
 
                 <!-- 2. EUCARISTÍA (Ícono SVG de Custodia) -->
-                <div class="bg-white border border-medalla-celeste/30 rounded-2xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden">
+                <div class="bg-white border border-medalla-dorado/40 border-l-4 border-l-medalla-dorado rounded-2xl shadow-sm hover:shadow-premium transition duration-300 overflow-hidden">
                     <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
                         <div class="flex items-center gap-4">
-                            <div class="w-11 h-11 rounded-full bg-medalla-celesteLight flex items-center justify-center text-medalla-celesteDark group-hover:bg-medalla-celesteDark group-hover:text-white transition">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-50 to-medalla-celesteLight border border-medalla-dorado/40 flex items-center justify-center text-medalla-dorado group-hover:bg-gradient-to-br group-hover:from-medalla-navy group-hover:to-medalla-celesteDark group-hover:text-white transition shadow-sm">
                                 <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                     <circle cx="12" cy="9" r="4.5"></circle>
                                     <path d="M12 2.5v2"></path>
@@ -407,10 +409,12 @@
                             </div>
                             <div>
                                 <span class="font-serif font-bold text-xl text-medalla-navy block">2. Eucaristía (Primera Comunión)</span>
-                                <span class="text-xs text-gray-400">Preparación catequética de dos años</span>
+                                <span class="text-xs text-amber-700 font-medium">Preparación catequética de dos años</span>
                             </div>
                         </div>
-                        <i class="fa-solid fa-chevron-down text-gray-400 group-hover:text-medalla-dorado transition-transform duration-300 transform"></i>
+                        <span class="w-8 h-8 rounded-full bg-amber-50 flex items-center justify-center text-medalla-navy group-hover:bg-medalla-dorado/20 transition">
+                            <i class="fa-solid fa-chevron-down text-xs group-hover:text-medalla-dorado transition-transform duration-300 transform"></i>
+                        </span>
                     </button>
                     <div class="accordion-content bg-[#FAFCFF] border-t border-gray-100">
                         <div class="p-6 sm:px-10 sm:py-8 text-gray-600 space-y-5 text-sm sm:text-base">
@@ -431,18 +435,20 @@
                 </div>
 
                 <!-- 3. CONFIRMACIÓN (Ícono de Paloma Blanca) -->
-                <div class="bg-white border border-medalla-celeste/30 rounded-2xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden">
+                <div class="bg-white border border-medalla-celeste/45 border-l-4 border-l-medalla-celesteDark rounded-2xl shadow-sm hover:shadow-premium transition duration-300 overflow-hidden">
                     <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
                         <div class="flex items-center gap-4">
-                            <div class="w-11 h-11 rounded-full bg-medalla-celesteLight flex items-center justify-center text-medalla-celesteDark group-hover:bg-medalla-celesteDark group-hover:text-white transition">
-                                <i class="fa-solid fa-dove"></i>
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-medalla-celesteLight to-sky-100 border border-medalla-celeste/40 flex items-center justify-center text-medalla-celesteDark group-hover:bg-gradient-to-br group-hover:from-medalla-navy group-hover:to-medalla-celesteDark group-hover:text-white transition shadow-sm">
+                                <i class="fa-solid fa-dove text-lg"></i>
                             </div>
                             <div>
                                 <span class="font-serif font-bold text-xl text-medalla-navy block">3. Confirmación</span>
-                                <span class="text-xs text-gray-400">Efusión especial del Espíritu Santo</span>
+                                <span class="text-xs text-medalla-celesteDark/80 font-medium">Efusión especial del Espíritu Santo</span>
                             </div>
                         </div>
-                        <i class="fa-solid fa-chevron-down text-gray-400 group-hover:text-medalla-dorado transition-transform duration-300 transform"></i>
+                        <span class="w-8 h-8 rounded-full bg-medalla-celesteLight/60 flex items-center justify-center text-medalla-navy group-hover:bg-medalla-dorado/20 transition">
+                            <i class="fa-solid fa-chevron-down text-xs group-hover:text-medalla-dorado transition-transform duration-300 transform"></i>
+                        </span>
                     </button>
                     <div class="accordion-content bg-[#FAFCFF] border-t border-gray-100">
                         <div class="p-6 sm:px-10 sm:py-8 text-gray-600 space-y-5 text-sm sm:text-base">
@@ -463,10 +469,10 @@
                 </div>
 
                 <!-- 4. MATRIMONIO (Ícono SVG de Anillos) -->
-                <div class="bg-white border border-medalla-celeste/30 rounded-2xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden">
+                <div class="bg-white border border-medalla-dorado/40 border-l-4 border-l-medalla-dorado rounded-2xl shadow-sm hover:shadow-premium transition duration-300 overflow-hidden">
                     <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none group">
                         <div class="flex items-center gap-4">
-                            <div class="w-11 h-11 rounded-full bg-medalla-celesteLight flex items-center justify-center text-medalla-celesteDark group-hover:bg-medalla-celesteDark group-hover:text-white transition">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-50 to-medalla-celesteLight border border-medalla-dorado/40 flex items-center justify-center text-medalla-dorado group-hover:bg-gradient-to-br group-hover:from-medalla-navy group-hover:to-medalla-celesteDark group-hover:text-white transition shadow-sm">
                                 <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                     <circle cx="9.5" cy="13.5" r="5"></circle>
                                     <circle cx="14.5" cy="13.5" r="5"></circle>
@@ -476,10 +482,12 @@
                             </div>
                             <div>
                                 <span class="font-serif font-bold text-xl text-medalla-navy block">4. Matrimonio</span>
-                                <span class="text-xs text-gray-400">Alianza permanente de amor e iglesia doméstica</span>
+                                <span class="text-xs text-amber-700 font-medium">Alianza permanente de amor e iglesia doméstica</span>
                             </div>
                         </div>
-                        <i class="fa-solid fa-chevron-down text-gray-400 group-hover:text-medalla-dorado transition-transform duration-300 transform"></i>
+                        <span class="w-8 h-8 rounded-full bg-amber-50 flex items-center justify-center text-medalla-navy group-hover:bg-medalla-dorado/20 transition">
+                            <i class="fa-solid fa-chevron-down text-xs group-hover:text-medalla-dorado transition-transform duration-300 transform"></i>
+                        </span>
                     </button>
                     <div class="accordion-content bg-[#FAFCFF] border-t border-gray-100">
                         <div class="p-6 sm:px-10 sm:py-8 text-gray-600 space-y-5 text-sm sm:text-base">
